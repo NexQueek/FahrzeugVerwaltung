@@ -20,10 +20,26 @@ namespace Fahrzeugverwaltung.UI
     /// </summary>
     public partial class VehicleWindow : Window
     {
+        private NewVehicleView newVehicleView;
+        private EditVehicleView editVehicleView;
         public VehicleWindow()
         {
             InitializeComponent();
             DataContext = new VehicleViewModel();
+        }
+        private void New_OnClick(object sender, RoutedEventArgs e)
+        {
+            newVehicleView = new NewVehicleView(DataContext);
+            newVehicleView.Show();
+        }
+        private void Edit_OnClick(object sender, RoutedEventArgs e)
+        {
+            editVehicleView = new EditVehicleView(DataContext);
+            editVehicleView.Show();
+        }
+        private void Delete_OnClick(object sender, RoutedEventArgs e)
+        {
+            //do stuff
         }
     }
 }

@@ -6,6 +6,19 @@
         xmlns:local="clr-namespace:Fahrzeugverwaltung.UI"
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="500">
+    <Window.DataContext>
+        <local:VehicleViewModel/>
+    </Window.DataContext>
+    <Window.Resources>
+        <ContextMenu x:Key="contextMenu">
+            <MenuItem Header="Neu"
+                      Click="New_OnClick"/>
+            <MenuItem Header="Bearbeiten"
+                      Click="Edit_OnClick"/>
+            <MenuItem Header="Löschen"
+                      Command="{Binding CtxDeleteCommand}"/>
+        </ContextMenu>
+    </Window.Resources>
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="Auto"/>
@@ -17,14 +30,23 @@
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
 
-        <Label Content="Typ des Vehicles:" Grid.Row="0" Grid.Column="0"/>
-        <Label Content="Modell:" Grid.Row="1" Grid.Column="0"/>
-        <TextBox Grid.Row="0" Text="{Binding Type}" Grid.Column="1"/>
-        <TextBox Grid.Row="1" Text="{Binding Model}" Grid.Column="1"/>
-        
-        <Button Content="speichern" Command="{Binding SaveCommand}" Grid.Column="1" Grid.Row="3"/>
-
+        <ListBox Grid.Row="4" Grid.Column="1"
+                 ItemsSource="{Binding VehicleCollection, UpdateSourceTrigger=PropertyChanged}"
+                 SelectedItem="{Binding SelectedVehicle, UpdateSourceTrigger=PropertyChanged}"
+                 SelectedIndex="{Binding SelectedIndex}"
+                 ContextMenu="{StaticResource contextMenu}">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Orientation="Horizontal">
+                        <Label Content="{Binding Type}" FontWeight="Bold"/>
+                        <Label Content="{Binding Brand}"/>
+                        <Label Content="{Binding Model}"/>
+                    </StackPanel>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
     </Grid>
 </Window>
