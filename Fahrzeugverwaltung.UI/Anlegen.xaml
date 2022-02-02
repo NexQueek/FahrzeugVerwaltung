@@ -1,14 +1,12 @@
-﻿<Window x:Class="Fahrzeugverwaltung.UI.VehicleWindow"
+﻿<Window x:Class="Fahrzeugverwaltung.UI.Anlegen"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:Fahrzeugverwaltung.UI" d:DataContext="{d:DesignInstance Type=local:VehicleViewModel}"
+        xmlns:local="clr-namespace:Fahrzeugverwaltung.UI"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="500">
+        Title="Anlegen" Height="450" Width="800">
     <Grid>
-  
-        
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="Auto"/>
             <ColumnDefinition Width="*"/>
@@ -21,9 +19,9 @@
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
-            
+
             <RowDefinition Height="*"/>
-            
+
 
         </Grid.RowDefinitions>
 
@@ -34,26 +32,26 @@
         <TextBox Grid.Row="0" Text="{Binding Type, Mode=TwoWay}" Grid.Column="1"/>
         <TextBox Grid.Row="1" Text="{Binding Model}" Grid.Column="1"/>
         <TextBox Grid.Row="2" Text="{Binding Brand}" Grid.Column="2"/>
-        
-            
+
+
 
         <Button Content="speichern" Command="{Binding SaveCommand}" Grid.Column="1" Grid.Row="3"/>
 
         <Button Content="löschen" Command="{Binding VehicleLoeschen}" Grid.Column="1" Grid.Row="4"/>
 
-        <Button Content="Anlegen/Bearbeiten" Click="AnlegenClicked" Grid.Column="1" Grid.Row="5"/>
+        
 
         <ListBox ItemsSource="{Binding Vehicles}" SelectedItem="{Binding VehicleChose}"  Grid.Row="6" Grid.Column="1" >
             <ListBox.ItemTemplate>
                 <DataTemplate>
                     <StackPanel Orientation="Horizontal">
-                    <Label Content="{Binding Type}" FontWeight="Bold"/>
-                    <Label Content="{Binding Brand}"/>
-                    <Label Content="{Binding Model}"/>
-                        
+                        <Label Content="{Binding Type}" FontWeight="Bold"/>
+                        <Label Content="{Binding Brand}"/>
+                        <Label Content="{Binding Model}"/>
+
                     </StackPanel>
                 </DataTemplate>
-                
+
             </ListBox.ItemTemplate>
 
             <ListBox.ContextMenu>
@@ -69,8 +67,7 @@
         </ListBox>
 
 
-        
-        
-        
+
+
     </Grid>
 </Window>

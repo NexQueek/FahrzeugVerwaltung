@@ -10,32 +10,18 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace Fahrzeugverwaltung.UI
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaktionslogik für VehicleNeu.xaml
     /// </summary>
-    public partial class VehicleWindow : Window
+    public partial class VehicleNeu : Window
     {
-        public VehicleWindow()
+        public VehicleNeu()
         {
             InitializeComponent();
-            DataContext = new VehicleViewModel();
         }
-
-        private void MenuItem_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        void AnlegenClicked(object sender, RoutedEventArgs e)
-        {
-            var anlegenWindow = new Anlegen();
-            anlegenWindow.Show();
-        }
-
     }
 }
