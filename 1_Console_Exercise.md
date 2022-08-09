@@ -79,6 +79,8 @@ Der **VehicleConsoleService** soll nun 4 Methoden bekommen
 Nun soll die alte Logik auf diese 4 Methoden extrahiert werden
 Außerdem soll die Klasse eine private Feld (auch Field genannt) bekommen 
 
+Was ist diese Field???????
+
 |Name| Datentyp  |
 |--|--|
 | vehicleList | List\<Vehicle\> |
@@ -117,7 +119,9 @@ Nun soll der Anwender beim Erstellen eines Vehicles gefragt ob es 1) ein PKW ode
     
    
 ### Aufgabe 7) Abstraktion
-In dieser Aufgabe soll der Anwender nicht mehr eine Instanz von der Klasse **Vehicle** erstellen können. Es soll entweder ein PKW oder ein LKW erstellt werden.
+In dieser Aufgabe soll der Anwender nicht mehr eine Instanz von der
+Klasse **Vehicle** erstellen können. Es soll entweder ein PKW oder ein LKW 
+erstellt werden.
 (Keyword: abstract)
 
 ### Aufgabe 8) Speichern der vehicle Liste
@@ -126,20 +130,32 @@ Die Eingaben sollen nun in einer JSON Datei gespeichert werden, dafür soll die 
 Die Datei soll unter C:/dev/vehicles.json gespeichert werden
 
 ### Aufgabe 9) Laden der Liste 
-Bei dem Start des Programmes soll geprüft werden, ob unter C:/dev die Datei vehicles.json verfügbar ist. Wenn die Datei verfügbar ist sollen die Vehicles in der Konsole angezigt werden. Ansonsten soll eine leere Liste erstellt werden.  
+Bei dem Start des Programmes soll geprüft werden, 
+ob unter C:/dev die Datei vehicles.json verfügbar ist. Wenn die Datei verfügbar ist 
+sollen die Vehicles in der Konsole angezigt werden. 
+Ansonsten soll eine leere Liste erstellt werden.  
 
 ### Aufgabe 10) Speichern erweitern.
 
 Sobald der User speichert drcükt soll er der Namen der Datei angeben.
 
 ### Aufgabe 11) Laden erweitern. 
-Das Programm soll beim start alle json Datein unter C:/dev auflisten. Der Nutzer soll über Zahleneingaben, die Liste auswählen die er bearbeiten kann.
+Das Programm soll beim start alle json Datein unter C:/dev auflisten. 
+Der Nutzer soll über Zahleneingaben, die Liste auswählen die er bearbeiten kann.
+
 
 ### Aufgabe 12) Styling in der Console
-Jedes Mal wenn der Nutzer etwas eingibt soll nun eine Nachricht erscheinen die anzeigt ob die Aktion erfolgreich war oder eben nicht. Sollte die Aktion erfolgreich sein, soll die Nachricht in grün angezeigt werden. Sollte die Aktion nicht erfolgreich sein, soll die Nachricht in rot ausgegeben werden
+Jedes Mal wenn der Nutzer etwas eingibt soll nun eine Nachricht erscheinen 
+die anzeigt ob die Aktion erfolgreich war oder eben nicht. 
+Sollte die Aktion erfolgreich sein, soll die Nachricht in grün angezeigt werden.
+Sollte die Aktion nicht erfolgreich sein, soll die Nachricht in rot ausgegeben werden
 
 ### Aufgabe 13) Ladebildschirm
-Sobald ein neues Fahrzeug angelegt wird soll eine Ladeanimation kommen und sobald diese fertig ist, soll eine Meldung erscheinen, dass das Fahrzeug erfolgreich angelegt wird. Das Laden soll 5 Sekunden dauern.
+Sobald ein neues Fahrzeug angelegt wird soll eine Ladeanimation kommen 
+und sobald diese fertig ist, soll eine Meldung erscheinen, 
+dass das Fahrzeug erfolgreich angelegt wird. Das Laden soll 5 Sekunden dauern.
 
 ### Aufgabe 14) Checken für Duplikate
-Nun soll bei dem Ladebildschirm auch noch geprüft werden ob ein Fahrzeug mit den gleichen Werten (außer Ident) schon vorhanden ist. Sollte das der Fall sein, soll der Ladevorgang aufhören und eine Fehlermeldung soll ausgegeben werden.
+Nun soll bei dem Ladebildschirm auch noch geprüft werden ob ein Fahrzeug mit den 
+gleichen Werten (außer Ident) schon vorhanden ist. Sollte das der Fall sein,
+soll der Ladevorgang aufhören und eine Fehlermeldung soll ausgegeben werden.
