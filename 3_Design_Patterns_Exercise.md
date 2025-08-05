@@ -26,4 +26,3 @@ Da diese Methode von dem Repository ausgeführt werden soll im VehicleService ei
 Die Methoden im **VehicleRepository** müssen in dieser Aufgabe implementiert werden. Dabei soll die Datenquelle eine JSon Datein sein. Beim der Save Methode soll ein Vehicle der Json Datei hinzugefügt werden. 
 Die JSon Datei hat dabei eine Liste von Vehicles.
 
-### Aufgabe 6) 
